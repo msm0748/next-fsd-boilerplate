@@ -99,9 +99,10 @@ npm run fsd
 
 2. 특정 생성기 바로 실행
 
-````bash
+```bash
 # 위젯 생성기 실행 (이름은 프롬프트에서 입력)
 npm run fsd widget
+```
 
 `package.json`에 정의된 스크립트:
 
@@ -111,7 +112,7 @@ npm run fsd widget
     "fsd": "plop"
   }
 }
-````
+```
 
 ### 제공되는 생성기
 
