@@ -1,0 +1,14 @@
+import { mutationOptions, useQueryClient } from '@tanstack/react-query';
+import { {{camelCase name}} } from '../api';
+
+
+export const use{{pascalCase name}} = () => {
+  const queryClient = useQueryClient();
+
+  return mutationOptions({
+    mutationFn: {{camelCase name}},
+    onSuccess: () => {
+      queryClient.invalidateQueries({ queryKey:  });
+    },
+  });
+};

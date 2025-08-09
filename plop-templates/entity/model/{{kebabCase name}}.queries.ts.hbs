@@ -1,0 +1,15 @@
+import { queryOptions } from '@tanstack/react-query';
+
+export const {{camelCase name}}Keys = {
+  all: ['{{camelCase name}}'] as const,
+  lists: () => [...{{camelCase name}}Keys.all, 'list'] as const,
+  list: () => [...{{camelCase name}}Keys.lists()] as const,
+  details: () => [...{{camelCase name}}Keys.all, 'detail'] as const,
+  detail: (id: string) => [...{{camelCase name}}Keys.details(), id] as const,
+};
+
+export const {{camelCase name}}Options = {
+  list: () => queryOptions({ queryKey: {{camelCase name}}Keys.list(), queryFn:  }),
+  detail: (id: string) =>
+    queryOptions({ queryKey: {{camelCase name}}Keys.detail(id), queryFn:  }),
+};

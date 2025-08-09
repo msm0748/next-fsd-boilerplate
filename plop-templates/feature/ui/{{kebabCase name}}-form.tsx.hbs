@@ -1,0 +1,14 @@
+'use client';
+
+import { useMutation } from '@tanstack/react-query';
+import { use{{pascalCase name}} } from '../model/use-{{kebabCase name}}';
+import { useState } from 'react';
+
+export const {{pascalCase name}}Form = () => {
+  const [errorMessage, setErrorMessage] = useState<string | null>(null);
+  const mutation = useMutation({
+    ...use{{pascalCase name}}(),
+    onError: (error) => {},
+  });
+  return <div>{{pascalCase name}}-form</div>;
+}

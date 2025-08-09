@@ -1,0 +1,7 @@
+import { api } from '@/shared/api';
+import { {{pascalCase name}}DTO } from '../model/{{kebabCase name}}.types';
+
+export const get{{pascalCase name}} = async (): Promise<{{pascalCase name}}DTO> => {
+    const data = await api<{{pascalCase name}}DTO>('');
+    return data;
+}

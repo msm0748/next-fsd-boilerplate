@@ -1,0 +1,10 @@
+import { api } from '@/shared/api';
+import { {{pascalCase name}}Payload } from '../model/{{kebabCase name}}.types';
+
+export const {{camelCase name}} = async (payload: {{pascalCase name}}Payload): Promise<> => {
+    const data = await api('', {
+        method: 'POST',
+        body: payload,
+    });
+    return data;
+};
